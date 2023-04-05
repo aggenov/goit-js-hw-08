@@ -34,7 +34,7 @@ filterForm.addEventListener('submit', handleSubmit);
 })();
 
 const onFormInput = evt => {
-  const { name, value } = evt.target;
+  const { name = '', value = '' } = evt.target;
 
   let saveData = load(LOCAL_STORAGE_KEY);
   saveData = saveData ? saveData : {};
