@@ -19,7 +19,7 @@ export const load = key => {
 export const remove = key => {
   try {
     const serializedState = localStorage.removeItem(key);
-    return serializedState === null ? undefined : JSON.parse(serializedState);
+    return serializedState;
   } catch (error) {
     console.error('Get state error: ', error.message);
   }
